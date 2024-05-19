@@ -11,6 +11,7 @@
 		A638EA852BF9D8D500856E5F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A638EA842BF9D8D500856E5F /* ContentView.swift */; };
 		A638EA872BF9D8D600856E5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A638EA862BF9D8D600856E5F /* Assets.xcassets */; };
 		A638EA8A2BF9D8D600856E5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A638EA892BF9D8D600856E5F /* Preview Assets.xcassets */; };
+		A6584F282BF9ECE100D60710 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6584F272BF9ECE100D60710 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A638EA842BF9D8D500856E5F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A638EA862BF9D8D600856E5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A638EA892BF9D8D600856E5F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A6584F272BF9ECE100D60710 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,11 @@
 		A638EA812BF9D8D500856E5F /* Swift_Messenger_App */ = {
 			isa = PBXGroup;
 			children = (
-				A638EA822BF9D8D500856E5F /* Swift_Messenger_AppApp.swift */,
-				A638EA842BF9D8D500856E5F /* ContentView.swift */,
+				A6584F232BF9EA5000D60710 /* Service */,
+				A6584F222BF9EA3B00D60710 /* Model */,
+				A6584F212BF9EA2400D60710 /* Core */,
+				A6584F202BF9EA1700D60710 /* Extensions */,
+				A6584F1E2BF9E9E200D60710 /* App */,
 				A638EA862BF9D8D600856E5F /* Assets.xcassets */,
 				A638EA882BF9D8D600856E5F /* Preview Content */,
 			);
@@ -65,6 +70,68 @@
 				A638EA892BF9D8D600856E5F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A6584F1E2BF9E9E200D60710 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A638EA822BF9D8D500856E5F /* Swift_Messenger_AppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A6584F202BF9EA1700D60710 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A6584F212BF9EA2400D60710 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A6584F252BF9EAFD00D60710 /* Root */,
+				A6584F242BF9EACA00D60710 /* Authentication */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A6584F222BF9EA3B00D60710 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A6584F232BF9EA5000D60710 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A6584F242BF9EACA00D60710 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A6584F262BF9EB2D00D60710 /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A6584F252BF9EAFD00D60710 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A638EA842BF9D8D500856E5F /* ContentView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		A6584F262BF9EB2D00D60710 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A6584F272BF9ECE100D60710 /* LoginView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6584F282BF9ECE100D60710 /* LoginView.swift in Sources */,
 				A638EA852BF9D8D500856E5F /* ContentView.swift in Sources */,
 				A638EA832BF9D8D500856E5F /* Swift_Messenger_AppApp.swift in Sources */,
 			);
