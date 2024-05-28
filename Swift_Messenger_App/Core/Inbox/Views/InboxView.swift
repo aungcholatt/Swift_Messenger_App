@@ -18,7 +18,7 @@ struct InboxView: View {
     }
     
     var body: some View {
-        NavigationStack{
+
             ScrollView{
                 ActiveNowView()
                 
@@ -33,11 +33,13 @@ struct InboxView: View {
                         }
                     }
                 }
-                .listStyle(PlainListStyle())
-                .frame(height: UIScreen.main.bounds.height - 120 )
-            }
             .onChange(of: selectedUser, perform: { newValue in
                 showChat = newValue != nil
+            })
+            .navigationDestination(for: Message.self, destination: { message in
+                if let user = message.user {
+                    ChatView(user: user)
+                }
             })
             .navigationDestination(for: User.self, destination:{ user in
                 ProfileView(user: user)
