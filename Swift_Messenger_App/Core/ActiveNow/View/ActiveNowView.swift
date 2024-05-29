@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ActiveNowView: View {
+    @StateObject var viewModel = ActiveNowViewModel()
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             HStack(spacing: 32){
-                ForEach(0 ... 10, id:  \.self){ user in
+                ForEach(viewModel.users, id:  \.self){ user in
+                 NavigationLink (value: Route.chatView(user)) {
                     VStack{
                         //Green light clycle bottom setting
                         ZStack(alignment: .bottomTrailing){
-                            CircularProfileImageView(user: User.MOCK_USER, size: .medium)
+                            CircularProfileImageView(user: user, size: .medium)
                         
                             ZStack{
                                 Circle()
@@ -27,10 +30,11 @@ struct ActiveNowView: View {
                                     .frame(width: 12,height: 12)
                             }
                         }
-                        Text("Hein")
-                            .font(.subheadline)
+                        Text(user.firstName)
+                            .font(.footnote)
                             .foregroundColor(.gray)
-                    }
+                     }
+                   }
                 }
             }
             .padding()
